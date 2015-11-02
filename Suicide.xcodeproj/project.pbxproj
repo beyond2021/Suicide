@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2208B5941BE7BDAA0037E9C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208B5931BE7BDAA0037E9C9 /* AppDelegate.swift */; };
-		2208B5961BE7BDAA0037E9C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208B5951BE7BDAA0037E9C9 /* ViewController.swift */; };
 		2208B5991BE7BDAA0037E9C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2208B5971BE7BDAA0037E9C9 /* Main.storyboard */; };
 		2208B59B1BE7BDAA0037E9C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2208B59A1BE7BDAA0037E9C9 /* Assets.xcassets */; };
 		2208B59E1BE7BDAA0037E9C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2208B59C1BE7BDAA0037E9C9 /* LaunchScreen.storyboard */; };
 		2208B5A91BE7BDAB0037E9C9 /* SuicideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208B5A81BE7BDAB0037E9C9 /* SuicideTests.swift */; };
 		2208B5B41BE7BDAB0037E9C9 /* SuicideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208B5B31BE7BDAB0037E9C9 /* SuicideUITests.swift */; };
+		2208B5C31BE7BEC60037E9C9 /* DropItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208B5C21BE7BEC60037E9C9 /* DropItViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		2208B5901BE7BDAA0037E9C9 /* Suicide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Suicide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2208B5931BE7BDAA0037E9C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2208B5951BE7BDAA0037E9C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2208B5981BE7BDAA0037E9C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2208B59A1BE7BDAA0037E9C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2208B59D1BE7BDAA0037E9C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		2208B5AF1BE7BDAB0037E9C9 /* SuicideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuicideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2208B5B31BE7BDAB0037E9C9 /* SuicideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuicideUITests.swift; sourceTree = "<group>"; };
 		2208B5B51BE7BDAB0037E9C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2208B5C21BE7BEC60037E9C9 /* DropItViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropItViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +97,9 @@
 		2208B5921BE7BDAA0037E9C9 /* Suicide */ = {
 			isa = PBXGroup;
 			children = (
-				2208B5931BE7BDAA0037E9C9 /* AppDelegate.swift */,
-				2208B5951BE7BDAA0037E9C9 /* ViewController.swift */,
 				2208B5971BE7BDAA0037E9C9 /* Main.storyboard */,
-				2208B59A1BE7BDAA0037E9C9 /* Assets.xcassets */,
-				2208B59C1BE7BDAA0037E9C9 /* LaunchScreen.storyboard */,
-				2208B59F1BE7BDAA0037E9C9 /* Info.plist */,
+				2208B5C21BE7BEC60037E9C9 /* DropItViewController.swift */,
+				2208B5C11BE7BE3F0037E9C9 /* Supporting Flies */,
 			);
 			path = Suicide;
 			sourceTree = "<group>";
@@ -123,6 +120,17 @@
 				2208B5B51BE7BDAB0037E9C9 /* Info.plist */,
 			);
 			path = SuicideUITests;
+			sourceTree = "<group>";
+		};
+		2208B5C11BE7BE3F0037E9C9 /* Supporting Flies */ = {
+			isa = PBXGroup;
+			children = (
+				2208B5931BE7BDAA0037E9C9 /* AppDelegate.swift */,
+				2208B59F1BE7BDAA0037E9C9 /* Info.plist */,
+				2208B59A1BE7BDAA0037E9C9 /* Assets.xcassets */,
+				2208B59C1BE7BDAA0037E9C9 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Flies";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2208B5961BE7BDAA0037E9C9 /* ViewController.swift in Sources */,
+				2208B5C31BE7BEC60037E9C9 /* DropItViewController.swift in Sources */,
 				2208B5941BE7BDAA0037E9C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
