@@ -9,10 +9,7 @@
 import UIKit
 
 class DropItViewController: UIViewController {
-    //Let make em fall
     
-    //let take the default magnitude and direction which is down at 1000 points/sec/sec
-    let gravity = UIGravityBehavior() //Create gravity
     
     //We also need a dynamic animator
 //    var animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: gameView)
@@ -26,25 +23,24 @@ class DropItViewController: UIViewController {
         return lazilyCreatedDynamicAnimator
     }()
     
+    //Create a drtopit behavior
+    let dropItBehavior = DropItBehavior()
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // add gravity here
-        animator.addBehavior(gravity) //here we add gravity to an animator. All we need to do here is say which items are affected by gravity. drop()
+        animator.addBehavior(dropItBehavior) //here we add gravity to an animator. All we need to do here is say which items are affected by gravity. drop()
         
         //Add the boundary
-        animator.addBehavior(collider)
+       // animator.addBehavior(collider)
         
         
     }
-    //To make the containers
-    lazy var collider: UICollisionBehavior = {
-        let lazilyCreatedCollider = UICollisionBehavior()
-        //I am doing it with a clousure because I want to configure it. I want to tyraslate the reference bounds into a boundary.
-        lazilyCreatedCollider.translatesReferenceBoundsIntoBoundary = true// Any intems in this will bounce off
-        return lazilyCreatedCollider
         
-    }()
-    
     
 
     @IBOutlet weak var gameView: UIView!
@@ -79,12 +75,16 @@ class DropItViewController: UIViewController {
         dropView.backgroundColor = UIColor.random //From my extention below
         
         //Now that we have our dropView let add it to my gameView
-        gameView.addSubview(dropView)
+//        gameView.addSubview(dropView)
         // add gravity
-        gravity.addItem(dropView) //Everything is going to start animating. I can add them later to start animating I can take them out to stop animating. ITS INSTANEOUS
+//        gravity.addItem(dropView) //Everything is going to start animating. I can add them later to start animating I can take them out to stop animating. ITS INSTANEOUS
+//        
+//        // add collider
+//        collider.addItem(dropView)
         
-        // add collider
-        collider.addItem(dropView)
+        
+        //
+        dropItBehavior.addDrop(dropView)
         
     }
 
