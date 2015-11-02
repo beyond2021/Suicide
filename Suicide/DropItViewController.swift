@@ -31,8 +31,19 @@ class DropItViewController: UIViewController {
         // add gravity here
         animator.addBehavior(gravity) //here we add gravity to an animator. All we need to do here is say which items are affected by gravity. drop()
         
+        //Add the boundary
+        animator.addBehavior(collider)
+        
         
     }
+    //To make the containers
+    lazy var collider: UICollisionBehavior = {
+        let lazilyCreatedCollider = UICollisionBehavior()
+        //I am doing it with a clousure because I want to configure it. I want to tyraslate the reference bounds into a boundary.
+        lazilyCreatedCollider.translatesReferenceBoundsIntoBoundary = true// Any intems in this will bounce off
+        return lazilyCreatedCollider
+        
+    }()
     
     
 
@@ -71,6 +82,9 @@ class DropItViewController: UIViewController {
         gameView.addSubview(dropView)
         // add gravity
         gravity.addItem(dropView) //Everything is going to start animating. I can add them later to start animating I can take them out to stop animating. ITS INSTANEOUS
+        
+        // add collider
+        collider.addItem(dropView)
         
     }
 
