@@ -40,6 +40,9 @@ class DropItViewController: UIViewController, UIDynamicAnimatorDelegate
         
     }
     }
+    
+   // var dropView : UIView?
+    
 // TODA WE CAN PUT THIS IN THE DROPITBEHAVIOR. Its opyional because i only have the attachment when I am panning.
     
     //We also need a dynamic animator
@@ -62,10 +65,28 @@ class DropItViewController: UIViewController, UIDynamicAnimatorDelegate
     
     
     
+    @IBAction func refresh(sender: UIBarButtonItem) {
+        
+        for view in gameView.subviews {
+           
+               // dropItBehavior.removeDrop(view)
+            
+            if let _ = view as? UILabel {
+               // print("this is a label")
+            } else {
+                dropItBehavior.removeDrop(view)
+            }
+         
+            
+        }
+        
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "DropZone"
+        
         // add gravity here
         animator.addBehavior(dropItBehavior) //here we add gravity to an animator. All we need to do here is say which items are affected by gravity. drop()
         
@@ -222,6 +243,20 @@ class DropItViewController: UIViewController, UIDynamicAnimatorDelegate
     func dynamicAnimatorDidPause(animator: UIDynamicAnimator) {
         removeCompletedRow()
     }
+    
+    //MARK: get the dropViews
+    func getLabelsInView(view: UIView) -> [UILabel] {
+        var results = [UILabel]()
+        for subview in view.subviews as [UIView] {
+            if let labelView = subview as? UILabel {
+                results += [labelView]
+            } else {
+                results += getLabelsInView(subview)
+            }
+        }
+        return results
+    }
+    
 
 }
 

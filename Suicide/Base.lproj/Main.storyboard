@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B22c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B22c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CB1-j2-Aa5">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -35,9 +35,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grab A Body With Your Bunji Cord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEm-gX-fnp">
-                                        <rect key="frame" x="104" y="203" width="393" height="33"/>
+                                        <rect key="frame" x="156" y="203" width="288" height="23"/>
                                         <animations/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -68,6 +68,13 @@
                             <constraint firstAttribute="trailing" secondItem="zxs-e7-Nyk" secondAttribute="trailing" id="tHZ-ko-quj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9RM-7E-kne">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="5Fd-o4-swd">
+                            <connections>
+                                <action selector="refresh:" destination="BYZ-38-t0r" id="j4S-K6-qcr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="gameView" destination="zxs-e7-Nyk" id="SzN-U2-wzI"/>
                     </connections>
@@ -83,6 +90,25 @@
                         <action selector="grabDrop:" destination="BYZ-38-t0r" id="HQk-gy-gbz"/>
                     </connections>
                 </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1117" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EoA-wK-qyU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CB1-j2-Aa5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="shq-55-DmQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dhq-bn-sdm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dao-wh-a7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="429"/>
         </scene>
