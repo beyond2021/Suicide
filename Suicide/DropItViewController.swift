@@ -9,8 +9,38 @@
 import UIKit
 
 class DropItViewController: UIViewController, UIDynamicAnimatorDelegate
-{
     
+{
+    var attachment: UIAttachmentBehavior? {
+    willSet{
+        //This is about to attach to something new here. remove the existin attachment if there is any attached
+        if attachment != nil{
+            animator.removeBehavior(attachment!)
+            gameView.setPath(nil , named: PathNames.Attachment)
+        }
+    }
+    didSet{
+        if attachment != nil{
+          animator.addBehavior(attachment!)
+            attachment?.action = { [unowned self] in 
+            
+            if let attachedView = self.attachment?.items.first as? UIView {
+                              //Lets see the anchor
+                let path = UIBezierPath()
+                //how do we get thje view to attach the string
+                path.moveToPoint(self.attachment!.anchorPoint)
+                path.addLineToPoint(attachedView.center)
+                self.gameView.setPath(path, named: PathNames.Attachment)
+                }
+                
+            }
+            
+            
+        }
+        
+    }
+    }
+// TODA WE CAN PUT THIS IN THE DROPITBEHAVIOR. Its opyional because i only have the attachment when I am panning.
     
     //We also need a dynamic animator
 //    var animator:UIDynamicAnimator = UIDynamicAnimator(referenceView: gameView)
@@ -46,6 +76,7 @@ class DropItViewController: UIViewController, UIDynamicAnimatorDelegate
     }
     struct PathNames {
         static let MiddleBarrier = "Middle Barrier"
+        static let Attachment = "Attachment"
     }
     
     //Put our individual boundary in view didlayoutSubView
@@ -80,6 +111,43 @@ class DropItViewController: UIViewController, UIDynamicAnimatorDelegate
         
     }
 
+    @IBAction func grabDrop(sender: UIPanGestureRecognizer) {
+        
+       // 1. First we need to create the attachment
+        //get the point which is just the senders location in our gameView
+        let gesturePoint = sender.locationInView(gameView)
+        
+        //2. As it moves we are just going to move the anchor point
+        // Here we switch on what stae we are in
+        switch sender.state{
+            //if we r in began I am just going to create the attachment
+        case .Began:
+            //In case lastDroppedView is not around
+            if let viewToAttachTo = lastDroppedView{
+            //Start the attachment business
+            attachment = UIAttachmentBehavior(item: viewToAttachTo, attachedToAnchor: gesturePoint)
+                //Lets add a feature that if u grab onto something u cant grab on to it again
+                lastDroppedView = nil
+            }
+        case .Changed:
+            attachment?.anchorPoint = gesturePoint
+            
+          //3 At the end we will set the attachment back to nil
+        case .Ended:
+            attachment = nil
+            
+        default: break // might be attachment == nil in case a phonecall comes it
+            
+        }
+        
+        
+        
+    }
+    
+    
+    var lastDroppedView: UIView?
+    
+    
     @IBAction func drop(sender: UITapGestureRecognizer) {
         drop()
     }
@@ -102,7 +170,7 @@ class DropItViewController: UIViewController, UIDynamicAnimatorDelegate
 //        
 //        // add collider
 //        collider.addItem(dropView)
-        
+        lastDroppedView = dropView
         
         //
         dropItBehavior.addDrop(dropView)
