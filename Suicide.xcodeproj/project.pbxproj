@@ -15,6 +15,7 @@
 		2208B5B41BE7BDAB0037E9C9 /* SuicideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208B5B31BE7BDAB0037E9C9 /* SuicideUITests.swift */; };
 		2208B5C31BE7BEC60037E9C9 /* DropItViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208B5C21BE7BEC60037E9C9 /* DropItViewController.swift */; };
 		2208B5C51BE7D5B00037E9C9 /* DropItBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208B5C41BE7D5B00037E9C9 /* DropItBehavior.swift */; };
+		2208B5C71BE84DA20037E9C9 /* BezierPathsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208B5C61BE84DA20037E9C9 /* BezierPathsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2208B5B51BE7BDAB0037E9C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2208B5C21BE7BEC60037E9C9 /* DropItViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropItViewController.swift; sourceTree = "<group>"; };
 		2208B5C41BE7D5B00037E9C9 /* DropItBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropItBehavior.swift; sourceTree = "<group>"; };
+		2208B5C61BE84DA20037E9C9 /* BezierPathsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierPathsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				2208B5971BE7BDAA0037E9C9 /* Main.storyboard */,
 				2208B5C21BE7BEC60037E9C9 /* DropItViewController.swift */,
+				2208B5C61BE84DA20037E9C9 /* BezierPathsView.swift */,
 				2208B5C41BE7D5B00037E9C9 /* DropItBehavior.swift */,
 				2208B5C11BE7BE3F0037E9C9 /* Supporting Flies */,
 			);
@@ -267,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2208B5C71BE84DA20037E9C9 /* BezierPathsView.swift in Sources */,
 				2208B5C31BE7BEC60037E9C9 /* DropItViewController.swift in Sources */,
 				2208B5941BE7BDAA0037E9C9 /* AppDelegate.swift in Sources */,
 				2208B5C51BE7D5B00037E9C9 /* DropItBehavior.swift in Sources */,

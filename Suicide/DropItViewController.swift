@@ -8,7 +8,8 @@
 
 import UIKit
 
-class DropItViewController: UIViewController {
+class DropItViewController: UIViewController, UIDynamicAnimatorDelegate
+{
     
     
     //We also need a dynamic animator
@@ -20,6 +21,9 @@ class DropItViewController: UIViewController {
     lazy  var animator:UIDynamicAnimator = {
         //This will not get initialized until someone ask for it. But this clousure better return a dynamic animator. Because we are setting it to the result. IMPORTANT DONOT CALL THIS BEFORE GAMEVIEW GETS SET. SO I NOT ACCESS IT UNTIL VIEW DID LOAD.
     let lazilyCreatedDynamicAnimator =    UIDynamicAnimator(referenceView: self.gameView)
+        // Make ourself the delegate
+        lazilyCreatedDynamicAnimator.delegate = self
+        
         return lazilyCreatedDynamicAnimator
     }()
     
@@ -40,10 +44,27 @@ class DropItViewController: UIViewController {
         
         
     }
+    struct PathNames {
+        static let MiddleBarrier = "Middle Barrier"
+    }
+    
+    //Put our individual boundary in view didlayoutSubView
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        // I want it right in the center. Lets make the size the same as the drop
+        let barrierSize = dropSize
+        // the origin of it in the middle
+        let barrierOrigin = CGPoint(x: gameView.bounds.midX - barrierSize.width/2, y: gameView.bounds.midY -  barrierSize.height/2)
+        //Lets create the bezierPath a circle using ovalInRect
+        let path = UIBezierPath(ovalInRect: CGRect(origin:barrierOrigin, size: barrierSize))
+        dropItBehavior.addBarrier(path, named: PathNames.MiddleBarrier)
+        //Lets see the Path
+        gameView.setPath(path, named: PathNames.MiddleBarrier)
+    }
         
     
 
-    @IBOutlet weak var gameView: UIView!
+    @IBOutlet weak var gameView: BezierPathsView!
     
     //Along the top of my view im going to drop those squares
     
@@ -87,7 +108,52 @@ class DropItViewController: UIViewController {
         dropItBehavior.addDrop(dropView)
         
     }
-
+    
+    
+    
+    //This function look for rows thats full and clls reove drop on them. This will be call when the animator settles down. I can find that out using the dynamic animator's delegate. dynamicAnimatorDidPause
+    
+    func removeCompletedRow()
+    {
+       var dropsToRemove = [UIView]()
+        var dropFrame = CGRect(x: 0, y: gameView.frame.maxY, width: dropSize.width, height: dropSize.height)
+        
+        repeat{
+            dropFrame.origin.y -= dropSize.height
+            dropFrame.origin.x = 0
+            var dropsFound = [UIView]()
+            var rowIsComplete = true
+            for _ in 0 ..< dropsPerRow {
+                if let hitView = gameView.hitTest(CGPoint(x: dropFrame.midX, y: dropFrame.midY), withEvent: nil){
+                    if hitView.superview == gameView {
+                        dropsFound.append(hitView)
+                        
+            } else {
+                rowIsComplete = false
+            }
+        }
+        dropFrame.origin.x += dropSize.width
+    }
+    if rowIsComplete {
+    dropsToRemove += dropsFound
+    
+    }
+    
+            
+        } while dropsToRemove.count == 0 && dropFrame.origin.y > 0
+        
+        for drop in dropsToRemove {
+            dropItBehavior.removeDrop(drop)
+            
+        }
+        
+    }
+   
+    
+    //MARK : UIDynamicAnimatorDelegate Methods
+    func dynamicAnimatorDidPause(animator: UIDynamicAnimator) {
+        removeCompletedRow()
+    }
 
 }
 
