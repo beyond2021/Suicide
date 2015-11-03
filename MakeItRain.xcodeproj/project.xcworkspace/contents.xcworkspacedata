@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Suicide.xcodeproj">
+      location = "self:/Users/keevinmitchell/Desktop/Suicide/MakeItRain.xcodeproj">
    </FileRef>
 </Workspace>

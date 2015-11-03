@@ -36,16 +36,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2208B5901BE7BDAA0037E9C9 /* Suicide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Suicide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2208B5901BE7BDAA0037E9C9 /* MakeItRain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeItRain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2208B5931BE7BDAA0037E9C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2208B5981BE7BDAA0037E9C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2208B59A1BE7BDAA0037E9C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2208B59D1BE7BDAA0037E9C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2208B59F1BE7BDAA0037E9C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2208B5A41BE7BDAB0037E9C9 /* SuicideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuicideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2208B5A41BE7BDAB0037E9C9 /* MakeItRain.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeItRain.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2208B5A81BE7BDAB0037E9C9 /* SuicideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuicideTests.swift; sourceTree = "<group>"; };
 		2208B5AA1BE7BDAB0037E9C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2208B5AF1BE7BDAB0037E9C9 /* SuicideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuicideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2208B5AF1BE7BDAB0037E9C9 /* MakeItRain.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeItRain.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2208B5B31BE7BDAB0037E9C9 /* SuicideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuicideUITests.swift; sourceTree = "<group>"; };
 		2208B5B51BE7BDAB0037E9C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2208B5C21BE7BEC60037E9C9 /* DropItViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropItViewController.swift; sourceTree = "<group>"; };
@@ -91,9 +91,9 @@
 		2208B5911BE7BDAA0037E9C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2208B5901BE7BDAA0037E9C9 /* Suicide.app */,
-				2208B5A41BE7BDAB0037E9C9 /* SuicideTests.xctest */,
-				2208B5AF1BE7BDAB0037E9C9 /* SuicideUITests.xctest */,
+				2208B5901BE7BDAA0037E9C9 /* MakeItRain.app */,
+				2208B5A41BE7BDAB0037E9C9 /* MakeItRain.xctest */,
+				2208B5AF1BE7BDAB0037E9C9 /* MakeItRain.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,9 +142,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2208B58F1BE7BDAA0037E9C9 /* Suicide */ = {
+		2208B58F1BE7BDAA0037E9C9 /* MakeItRain */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2208B5B81BE7BDAB0037E9C9 /* Build configuration list for PBXNativeTarget "Suicide" */;
+			buildConfigurationList = 2208B5B81BE7BDAB0037E9C9 /* Build configuration list for PBXNativeTarget "MakeItRain" */;
 			buildPhases = (
 				2208B58C1BE7BDAA0037E9C9 /* Sources */,
 				2208B58D1BE7BDAA0037E9C9 /* Frameworks */,
@@ -154,14 +154,14 @@
 			);
 			dependencies = (
 			);
-			name = Suicide;
+			name = MakeItRain;
 			productName = Suicide;
-			productReference = 2208B5901BE7BDAA0037E9C9 /* Suicide.app */;
+			productReference = 2208B5901BE7BDAA0037E9C9 /* MakeItRain.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2208B5A31BE7BDAB0037E9C9 /* SuicideTests */ = {
+		2208B5A31BE7BDAB0037E9C9 /* MakeItRainTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2208B5BB1BE7BDAB0037E9C9 /* Build configuration list for PBXNativeTarget "SuicideTests" */;
+			buildConfigurationList = 2208B5BB1BE7BDAB0037E9C9 /* Build configuration list for PBXNativeTarget "MakeItRainTests" */;
 			buildPhases = (
 				2208B5A01BE7BDAB0037E9C9 /* Sources */,
 				2208B5A11BE7BDAB0037E9C9 /* Frameworks */,
@@ -172,14 +172,14 @@
 			dependencies = (
 				2208B5A61BE7BDAB0037E9C9 /* PBXTargetDependency */,
 			);
-			name = SuicideTests;
+			name = MakeItRainTests;
 			productName = SuicideTests;
-			productReference = 2208B5A41BE7BDAB0037E9C9 /* SuicideTests.xctest */;
+			productReference = 2208B5A41BE7BDAB0037E9C9 /* MakeItRain.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2208B5AE1BE7BDAB0037E9C9 /* SuicideUITests */ = {
+		2208B5AE1BE7BDAB0037E9C9 /* MakeItRainUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2208B5BE1BE7BDAB0037E9C9 /* Build configuration list for PBXNativeTarget "SuicideUITests" */;
+			buildConfigurationList = 2208B5BE1BE7BDAB0037E9C9 /* Build configuration list for PBXNativeTarget "MakeItRainUITests" */;
 			buildPhases = (
 				2208B5AB1BE7BDAB0037E9C9 /* Sources */,
 				2208B5AC1BE7BDAB0037E9C9 /* Frameworks */,
@@ -190,9 +190,9 @@
 			dependencies = (
 				2208B5B11BE7BDAB0037E9C9 /* PBXTargetDependency */,
 			);
-			name = SuicideUITests;
+			name = MakeItRainUITests;
 			productName = SuicideUITests;
-			productReference = 2208B5AF1BE7BDAB0037E9C9 /* SuicideUITests.xctest */;
+			productReference = 2208B5AF1BE7BDAB0037E9C9 /* MakeItRain.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					2208B58F1BE7BDAA0037E9C9 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = SC6R6MV2N8;
 					};
 					2208B5A31BE7BDAB0037E9C9 = {
 						CreatedOnToolsVersion = 7.1;
@@ -218,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2208B58B1BE7BDAA0037E9C9 /* Build configuration list for PBXProject "Suicide" */;
+			buildConfigurationList = 2208B58B1BE7BDAA0037E9C9 /* Build configuration list for PBXProject "MakeItRain" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -231,9 +232,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2208B58F1BE7BDAA0037E9C9 /* Suicide */,
-				2208B5A31BE7BDAB0037E9C9 /* SuicideTests */,
-				2208B5AE1BE7BDAB0037E9C9 /* SuicideUITests */,
+				2208B58F1BE7BDAA0037E9C9 /* MakeItRain */,
+				2208B5A31BE7BDAB0037E9C9 /* MakeItRainTests */,
+				2208B5AE1BE7BDAB0037E9C9 /* MakeItRainUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,12 +299,12 @@
 /* Begin PBXTargetDependency section */
 		2208B5A61BE7BDAB0037E9C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2208B58F1BE7BDAA0037E9C9 /* Suicide */;
+			target = 2208B58F1BE7BDAA0037E9C9 /* MakeItRain */;
 			targetProxy = 2208B5A51BE7BDAB0037E9C9 /* PBXContainerItemProxy */;
 		};
 		2208B5B11BE7BDAB0037E9C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2208B58F1BE7BDAA0037E9C9 /* Suicide */;
+			target = 2208B58F1BE7BDAA0037E9C9 /* MakeItRain */;
 			targetProxy = 2208B5B01BE7BDAB0037E9C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -413,10 +414,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Suicide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.beyond2021.Suicide;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beyond2021.MakeItRain;
+				PRODUCT_NAME = MakeItRain;
 			};
 			name = Debug;
 		};
@@ -424,10 +426,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Suicide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.beyond2021.Suicide;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beyond2021.MakeItRain;
+				PRODUCT_NAME = MakeItRain;
 			};
 			name = Release;
 		};
@@ -438,8 +441,8 @@
 				INFOPLIST_FILE = SuicideTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beyond2021.SuicideTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Suicide.app/Suicide";
+				PRODUCT_NAME = MakeItRain;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MakeItRain.app/MakeItRain";
 			};
 			name = Debug;
 		};
@@ -450,8 +453,8 @@
 				INFOPLIST_FILE = SuicideTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beyond2021.SuicideTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Suicide.app/Suicide";
+				PRODUCT_NAME = MakeItRain;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MakeItRain.app/MakeItRain";
 			};
 			name = Release;
 		};
@@ -461,7 +464,7 @@
 				INFOPLIST_FILE = SuicideUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beyond2021.SuicideUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MakeItRain;
 				TEST_TARGET_NAME = Suicide;
 				USES_XCTRUNNER = YES;
 			};
@@ -473,7 +476,7 @@
 				INFOPLIST_FILE = SuicideUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.beyond2021.SuicideUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MakeItRain;
 				TEST_TARGET_NAME = Suicide;
 				USES_XCTRUNNER = YES;
 			};
@@ -482,7 +485,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2208B58B1BE7BDAA0037E9C9 /* Build configuration list for PBXProject "Suicide" */ = {
+		2208B58B1BE7BDAA0037E9C9 /* Build configuration list for PBXProject "MakeItRain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2208B5B61BE7BDAB0037E9C9 /* Debug */,
@@ -491,7 +494,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2208B5B81BE7BDAB0037E9C9 /* Build configuration list for PBXNativeTarget "Suicide" */ = {
+		2208B5B81BE7BDAB0037E9C9 /* Build configuration list for PBXNativeTarget "MakeItRain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2208B5B91BE7BDAB0037E9C9 /* Debug */,
@@ -499,7 +502,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		2208B5BB1BE7BDAB0037E9C9 /* Build configuration list for PBXNativeTarget "SuicideTests" */ = {
+		2208B5BB1BE7BDAB0037E9C9 /* Build configuration list for PBXNativeTarget "MakeItRainTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2208B5BC1BE7BDAB0037E9C9 /* Debug */,
@@ -507,7 +510,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		2208B5BE1BE7BDAB0037E9C9 /* Build configuration list for PBXNativeTarget "SuicideUITests" */ = {
+		2208B5BE1BE7BDAB0037E9C9 /* Build configuration list for PBXNativeTarget "MakeItRainUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2208B5BF1BE7BDAB0037E9C9 /* Debug */,
