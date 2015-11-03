@@ -19,9 +19,40 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxs-e7-Nyk" customClass="BezierPathsView" customModule="Suicide" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap The Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptT-06-Joh">
+                                        <rect key="frame" x="209" y="66" width="183" height="33"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill A Row" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCC-TY-pzX">
+                                        <rect key="frame" x="244" y="133" width="112" height="33"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grab A Body With Your Bunji Cord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEm-gX-fnp">
+                                        <rect key="frame" x="104" y="203" width="393" height="33"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="bEm-gX-fnp" firstAttribute="centerX" secondItem="zxs-e7-Nyk" secondAttribute="centerX" id="0ZM-7f-2Cy"/>
+                                    <constraint firstItem="ptT-06-Joh" firstAttribute="centerX" secondItem="zxs-e7-Nyk" secondAttribute="centerX" id="MXI-aK-IXy"/>
+                                    <constraint firstItem="HCC-TY-pzX" firstAttribute="centerX" secondItem="zxs-e7-Nyk" secondAttribute="centerX" id="TUx-zY-c3V"/>
+                                    <constraint firstItem="ptT-06-Joh" firstAttribute="top" secondItem="zxs-e7-Nyk" secondAttribute="top" constant="66" id="c73-Th-uai"/>
+                                    <constraint firstItem="HCC-TY-pzX" firstAttribute="top" secondItem="ptT-06-Joh" secondAttribute="bottom" constant="34" id="qam-65-xCh"/>
+                                    <constraint firstItem="bEm-gX-fnp" firstAttribute="top" secondItem="HCC-TY-pzX" secondAttribute="bottom" constant="37" id="r28-lw-0Tc"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="OM5-Sj-BML" appends="YES" id="Bxm-h1-Y3O"/>
                                     <outletCollection property="gestureRecognizers" destination="L6f-YK-a7Y" appends="YES" id="krW-Vy-Y4a"/>
